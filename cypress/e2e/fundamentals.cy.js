@@ -6,10 +6,14 @@ describe("Fundamentals tests", () => {
     // cy.get('[data-test="fundamentals-header"]').contains(
     //   /Testing Fundamentals/i
     // );
-    cy.get('[data-test="fundamentals-header"]').should(
+    cy.getDataTest("fundamentals-header").should(
       "contain.text",
       "Testing Fundamentals"
     );
+    // cy.get('[data-test="fundamentals-header"]').should(
+    //   "contain.text",
+    //   "Testing Fundamentals"
+    // );
   });
   it("Accordion works correctly", () => {
     cy.contains(/Your tests will exist in a describe block/i).should(
